@@ -72,6 +72,7 @@ class TodoApp extends Component {
         e.preventDefault();
         // console.log(this.refs.todo_item.value);
         database.child("React Redux Todo List").push(this.todo_item.value);
+        this.todo_item.value = null;
     }
 
     delete_all_todo_items(e) {
